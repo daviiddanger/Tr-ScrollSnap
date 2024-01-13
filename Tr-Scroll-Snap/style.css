@@ -1,0 +1,33 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main{
+    height: 100vh;
+    overflow-y: scroll;
+    /* 1era parte importante*/
+    scroll-snap-type: y mandatory;
+}
+
+main > section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffd500;
+    /*2da parte importante*/
+    scroll-snap-align: start; 
+    scroll-snap-stop: always;
+}
+
+main > section:nth-child(odd){
+    background: #b200ff;
+}
+
+main > section > div{
+    font-size: 90px;
+    font-weight: 900;
+    color: #fff;
+}
